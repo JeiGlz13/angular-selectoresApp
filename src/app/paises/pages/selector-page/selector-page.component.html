@@ -24,7 +24,10 @@
     </div>
   </div>
 
-  <div class="row">
+  <div
+    class="row"
+    *ngIf="paises.length !== 0"
+  >
     <div class="col">
       <label class="form-label">
         Pais
@@ -44,7 +47,10 @@
     </div>
   </div>
 
-  <div class="row">
+  <div
+    class="row"
+    *ngIf="frontera.length !== 0"
+  >
     <div class="col">
       <label class="form-label">
         Fronteras
@@ -61,6 +67,17 @@
           {{ pais.name.common }}
         </option>
       </select>
+    </div>
+  </div>
+
+  <div
+    class="row"
+    *ngIf="cargando"
+  >
+    <div class="col">
+      <div class="alert alert-primary">
+        Cargando...
+      </div>
     </div>
   </div>
 
